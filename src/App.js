@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import {Grommet, Box, Text, Button, Header, Main, Heading} from 'grommet';
+import Choice from './Choice';
+import FirstStep from './firststep';
 
 function App() {
+  const choice = false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+        {
+          choice? <Choice /> : <FirstStep />
+        }
+      </Main>
   );
 }
 
