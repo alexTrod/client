@@ -13,12 +13,12 @@ function FirstStep() {
 
       </Header>
       <Box pad="large" align="center" justify="center">
-        <Box pad ="large" justify="center">
+        <Box pad ="small" justify="center">
           <Heading level="5">
             We need some information about you          
           </Heading>         
         </Box>
-        <Box gap="large"> {/**form */}
+        <Box> {/**form */}
         <Form
             value={value}
             onChange={nextValue => setValue(nextValue)}
@@ -33,7 +33,7 @@ function FirstStep() {
             </FormField>        
         </Form>
         </Box>
-        <Box pad ="large" justify="center">
+        <Box pad ="small" justify="center">
           <Heading level="5">
             What spot would you like (physical)         
           </Heading>         
@@ -41,7 +41,7 @@ function FirstStep() {
         <Box gap="large"> {/**form */}
         </Box>
         <Box pad="small">
-            <Button label="Submit"
+            <Button label="Go to payment"
             ></Button>
         </Box>
       </Box>
