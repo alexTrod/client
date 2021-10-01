@@ -1,20 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import {Grommet, Box, Text, Button, Header, Main, Heading} from 'grommet';
-import Choice from './Choice';
-import FirstStep from './firststep';
-import SecondStep from './secondstep';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
-  const choice = false;
-  // <SecondStep />
+import Choice from "./choice";
+import FirstStep from "./firststep";
+import SecondStep from "./secondstep";
+import ThirdStep from "./thirdstep";
+
+export default function App() {
   return (
-    <Main>
-        {
-          choice? <Choice /> : <SecondStep />
-        }
-      </Main>
+
+    <Router>
+        <Switch>    
+          <Route path="/choice">
+            <Choice />
+          </Route>
+          <Route path="/information">
+            <FirstStep />
+          </Route>
+          <Route path="/payment">
+            <SecondStep />
+          </Route>          
+          <Route path="/pass">
+            <ThirdStep />
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 
-export default App;
